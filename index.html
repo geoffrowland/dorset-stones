@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
     <script src="L.TileLayer.BetterWMS.js"></script>
     <script src="leaflet-bing-layer.js"></script>
-    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+    <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js"></script>
     <script src="leaflet-fullHash.js"></script>
     <script src="Leaflet.fullscreen.js"></script>
     <link href="leaflet.fullscreen.css" rel="stylesheet" />
@@ -555,37 +555,37 @@
     });
     var siteData = L.geoJson(null, {
 		pointToLayer: function (feature, latlng) {
-			if (feature.properties.Type == 'Dry Stone Walling Centre'){
-			    return L.marker(latlng, {icon: redIcon})
-			}else if(feature.properties.Type == 'Chalk'){
-				return L.marker(latlng, {icon: greenIcon})
-			}else if(feature.properties.Type == 'Kimmeridge'){
-				return L.marker(latlng, {icon: greyIcon})
-			}else if(feature.properties.Type == 'Building'){
-				return L.marker(latlng, {icon: yellowIcon})
-			}else if(feature.properties.Type == 'Oil-shale'){
-				return L.marker(latlng, {icon: blackIcon})
-			}else if(feature.properties.Type == 'Ironstone'){
-				return L.marker(latlng, {icon: orangeIcon})
-			}else{
+			//if (feature.properties.Type == 'Dry Stone Walling Centre'){
+			//    return L.marker(latlng, {icon: redIcon})
+			//}else if(feature.properties.Type == 'Chalk'){
+			//	return L.marker(latlng, {icon: greenIcon})
+			//}else if(feature.properties.Type == 'Kimmeridge'){
+			//	return L.marker(latlng, {icon: greyIcon})
+			//}else if(feature.properties.Type == 'Building'){
+			//	return L.marker(latlng, {icon: yellowIcon})
+			//}else if(feature.properties.Type == 'Oil-shale'){
+			//	return L.marker(latlng, {icon: blackIcon})
+			//}else if(feature.properties.Type == 'Ironstone'){
+			//	return L.marker(latlng, {icon: orangeIcon})
+			//}else{
 				return L.marker(latlng, {icon: blueIcon})
 			}
-        },
-        onEachFeature: function(feature, layer) {
-			layer.bindTooltip(
-			    feature.properties.Feature +
-			     '<br />' + feature.properties.GridRef.split(" ")[0] + ' ' + feature.properties.GridRef.split(" ")[1].substr(0,3) + ' ' + feature.properties.GridRef.split(" ")[2].substr(0,3)
-			);
-            layer.bindPopup(
-            'Feature: ' + feature.properties.Feature +
-            '<br />' + feature.properties.Description +
-            '<br /><img width="100%" src="img/' + feature.properties.Image + '">' +
-            '<br /><a href = "' + feature.properties.Link + '" target = "_blank">More information</a>' +
-            '<br /><br />Parish: ' + feature.properties.Parish + 
-            '<br />Short Grid Ref: ' + feature.properties.GridRef.split(" ")[0] + ' ' + feature.properties.GridRef.split(" ")[1].substr(0,3) + ' ' + feature.properties.GridRef.split(" ")[2].substr(0,3) +
-            '<br />Long Grid Ref: ' + feature.properties.GridRef +
-            '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()
-            );
+        //},
+        //onEachFeature: function(feature, layer) {
+	//		layer.bindTooltip(
+	//		    feature.properties.Feature +
+	//		     '<br />' + feature.properties.GridRef.split(" ")[0] + ' ' + feature.properties.GridRef.split(" ")[1].substr(0,3) + ' ' + feature.properties.GridRef.split(" ")[2].substr(0,3)
+	//		);
+        //    layer.bindPopup(
+        //    'Feature: ' + feature.properties.Feature +
+       //     '<br />' + feature.properties.Description +
+        //    '<br /><img width="100%" src="img/' + feature.properties.Image + '">' +
+        //    '<br /><a href = "' + feature.properties.Link + '" target = "_blank">More information</a>' +
+        //    '<br /><br />Parish: ' + feature.properties.Parish + 
+        //    '<br />Short Grid Ref: ' + feature.properties.GridRef.split(" ")[0] + ' ' + feature.properties.GridRef.split(" ")[1].substr(0,3) + ' ' + feature.properties.GridRef.split(" ")[2].substr(0,3) +
+        //    '<br />Long Grid Ref: ' + feature.properties.GridRef +
+        //    '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()
+        //    );
         }
     });
 	var map = L.map('map', {
