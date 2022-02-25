@@ -380,71 +380,80 @@
 		opacity: 0.5,
 		attribution: "© <a href='https://www.dorsetcouncil.gov.uk/libraries-history-culture/dorset-history-centre/' target='_blank'>Dorset History Centre</a>",
 		minZoom: 12,
-		maxNativeZoom: 18
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset1 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-1/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom:12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset2 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-2/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset3 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-3/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset4 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-4/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset5 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-5/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset6 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-6/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset7 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-7/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 1,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset8 = L.tileLayer('https://geoffrowland.github.io/OS-First-Dorset-8/{z}/{x}/{y}.png', {
 		tms: true,
 		opacity: 0.5,
 		attribution: "© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88",
-		minZoom: 11,
-		maxNativeZoom: 18
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var surface = L.tileLayer('https://geoffrowland.github.io/Surface-Purbeck/{z}/{x}/{y}.png', {
@@ -453,10 +462,13 @@
                 attribution: '&copy <a title="Environment Agency LiDAR DTM" target="_blank" href="https://environment.data.gov.uk/DefraDataDownload/?Mode=survey">EA</a> copyright and database right 2020',
 		minZoom: 12,
 		maxNativeZoom: 18,
-		maxZoom: 22
+		maxZoom: 21
 		//bounds: L.latLngBounds([[50.667743, -3.133850],[50.884842, -2.988281]])
 	});
 	var dorset1880 = L.layerGroup([dorset1, dorset2, dorset3, dorset4, dorset5, dorset6, dorset7, dorset8],{
+		minZoom: 12,
+		maxNativeZoom: 18,
+		maxZoom: 21,
 		attribution: '© Crown Copyright and Landmark Information Group Limited 2020. All rights reserved. 1860-88'
         });
 	
@@ -466,7 +478,7 @@
         opacity: 0.5,
         minZoom: 11,
 	maxNativeZoom: 18,
-	maxZoom:20,	
+	maxZoom:21,	
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])	
 	});
 	var dorsetholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png', {
@@ -475,13 +487,13 @@
         opacity: 0.5,
         minZoom: 11,
 	maxNativeZoom: 18,
-	maxZoom:20,
+	maxZoom:21,
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])
 	//bounds: L.latLngBounds([[49.87532392, -6.39247979],[55.78194849, 1.74496421]])	
 	});
     var dorset1900 = L.layerGroup([dorset, dorsetholes],{
 	        maxNativeZoom: 18,
-	        maxZoom:20,
+	        maxZoom:21,
 		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
     });
     var parish = L.geoJSON(dorsetParish,{
@@ -596,7 +608,7 @@
 		center: [50.74, -2.50],
 		minZoom: 4,
 		zoom: 10,
-		maxZoom: 20,
+		maxZoom: 21,
 		layers: [terraindtm, os],
 		fullscreenControl: true,
 	});
