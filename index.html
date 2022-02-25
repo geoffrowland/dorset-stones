@@ -465,7 +465,8 @@
         transparent: true,
         opacity: 0.5,
         minZoom: 11,
-	maxNativeZoom: 18,
+	maxNativeZoom: 18
+	maxZoom:20,	
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])	
 	});
 	var dorsetholes = L.tileLayer('https://geo.nls.uk/mapdata3/os/25_inch_holes_england/{z}/{x}/{y}.png', {
@@ -474,11 +475,13 @@
         opacity: 0.5,
         minZoom: 11,
 	maxNativeZoom: 18,
+	maxZoom:20,
         bounds: L.latLngBounds([[50.51, -2.96],[51.09, -1.79]])
 	//bounds: L.latLngBounds([[49.87532392, -6.39247979],[55.78194849, 1.74496421]])	
 	});
     var dorset1900 = L.layerGroup([dorset, dorsetholes],{
 	        maxNativeZoom: 18,
+	        maxZoom:20,
 		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
     });
     var parish = L.geoJSON(dorsetParish,{
