@@ -478,6 +478,7 @@
 	//bounds: L.latLngBounds([[49.87532392, -6.39247979],[55.78194849, 1.74496421]])	
 	});
     var dorset1900 = L.layerGroup([dorset, dorsetholes],{
+	        maxNativeZoom: 18,
 		attribution: 'Historic OS maps © <a target = "_blank" href="https://maps.nls.uk/" title="National Library of Scotland">NLS</a>'
     });
     var parish = L.geoJSON(dorsetParish,{
@@ -592,7 +593,7 @@
 		center: [50.74, -2.50],
 		minZoom: 4,
 		zoom: 10,
-		maxZoom: 22,
+		maxZoom: 20,
 		layers: [terraindtm, os],
 		fullscreenControl: true,
 	});
