@@ -587,21 +587,22 @@
 				return L.marker(latlng, {icon: blueIcon})
 			}
         //},
-        //onEachFeature: function(feature, layer) {
+        onEachFeature: function(feature, layer) {
 	//		layer.bindTooltip(
 	//		    feature.properties.Feature +
 	//		     '<br />' + feature.properties.GridRef.split(" ")[0] + ' ' + feature.properties.GridRef.split(" ")[1].substr(0,3) + ' ' + feature.properties.GridRef.split(" ")[2].substr(0,3)
 	//		);
-        //    layer.bindPopup(
-        //    'Feature: ' + feature.properties.Feature +
-       //     '<br />' + feature.properties.Description +
+            layer.bindPopup(
+            'Name: ' + feature.properties.name +
+            '<br />' + feature.properties.id +
         //    '<br /><img width="100%" src="img/' + feature.properties.Image + '">' +
         //    '<br /><a href = "' + feature.properties.Link + '" target = "_blank">More information</a>' +
+	      '<br /><br />Parish: ' + feature.properties.geology + 	    
         //    '<br /><br />Parish: ' + feature.properties.Parish + 
         //    '<br />Short Grid Ref: ' + feature.properties.GridRef.split(" ")[0] + ' ' + feature.properties.GridRef.split(" ")[1].substr(0,3) + ' ' + feature.properties.GridRef.split(" ")[2].substr(0,3) +
         //    '<br />Long Grid Ref: ' + feature.properties.GridRef +
-        //    '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()
-        //    );
+              '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()
+              );
         }
     });
 	var map = L.map('map', {
