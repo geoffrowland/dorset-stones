@@ -572,7 +572,7 @@
     var siteData = L.geoJson(null, {
 		pointToLayer: function (feature, latlng) {
 			if (feature.properties.geology == 'Sarsen'){
-			//      return L.marker(latlng, {icon: redIcon})
+			        return L.marker(latlng, {icon: redIcon})
 			//}else if(feature.properties.geology == 'Upper Greensand'){
 			//	return L.marker(latlng, {icon: greenIcon})
 			//}else if(feature.properties.geology == 'Portland Sand'){
@@ -602,7 +602,7 @@
         //    '<br />Long Grid Ref: ' + feature.properties.GridRef +
         //    '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()
         //    );
-        //}
+        }
     });
 	var map = L.map('map', {
 		center: [50.74, -2.50],
