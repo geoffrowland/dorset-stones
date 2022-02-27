@@ -571,19 +571,19 @@
     });
     var siteData = L.geoJson(null, {
 		pointToLayer: function (feature, latlng) {
-			//if (feature.properties.Type == 'Dry Stone Walling Centre'){
-			//    return L.marker(latlng, {icon: redIcon})
-			//}else if(feature.properties.Type == 'Chalk'){
-			//	return L.marker(latlng, {icon: greenIcon})
-			//}else if(feature.properties.Type == 'Kimmeridge'){
-			//	return L.marker(latlng, {icon: greyIcon})
-			//}else if(feature.properties.Type == 'Building'){
-			//	return L.marker(latlng, {icon: yellowIcon})
+			if (feature.properties.geology == 'Sarsen'){
+			        return L.marker(latlng, {icon: redIcon})
+			}else if(feature.properties.geology == 'Upper Greensand'){
+				return L.marker(latlng, {icon: greenIcon})
+			}else if(feature.properties.geology == 'Portland Sand'){
+				return L.marker(latlng, {icon: greyIcon})
+			}else if(feature.properties.geology == 'Forest Marble'){
+				return L.marker(latlng, {icon: yellowIcon})
 			//}else if(feature.properties.Type == 'Oil-shale'){
 			//	return L.marker(latlng, {icon: blackIcon})
-			//}else if(feature.properties.Type == 'Ironstone'){
-			//	return L.marker(latlng, {icon: orangeIcon})
-			//}else{
+			}else if(feature.properties.geology == 'Heathstone'){
+				return L.marker(latlng, {icon: orangeIcon})
+			}else{
 				return L.marker(latlng, {icon: blueIcon})
 			}
         //},
