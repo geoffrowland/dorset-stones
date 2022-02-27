@@ -571,8 +571,8 @@
     });
     var siteData = L.geoJson(null, {
 		pointToLayer: function (feature, latlng) {
-			//if (feature.properties.geology == 'Sarsen'){
-			//        return L.marker(latlng, {icon: redIcon})
+			if (feature.properties.geology == 'Sarsen'){
+			        return L.marker(latlng, {icon: redIcon})
 			//}else if(feature.properties.geology == 'Upper Greensand'){
 			//	return L.marker(latlng, {icon: greenIcon})
 			//}else if(feature.properties.geology == 'Portland Sand'){
@@ -583,8 +583,8 @@
 			//	return L.marker(latlng, {icon: blackIcon})
 			//}else if(feature.properties.geology == 'Heathstone'){
 			//	return L.marker(latlng, {icon: orangeIcon})
-			//}else{
-				return L.marker(latlng, {icon: redIcon})
+			}else{
+				return L.marker(latlng, {icon: blueIcon})
 			}
         //},
         //onEachFeature: function(feature, layer) {
