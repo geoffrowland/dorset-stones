@@ -590,13 +590,13 @@
         onEachFeature: function(feature, layer) {
 	  		layer.bindTooltip(
 	  		    feature.properties.name +
-		            '<br />' + feature.properties.id +
-			    '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()  		 
+		            '<br />' + feature.properties.id
+			    //'<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()  		 
 	  		);
             layer.bindPopup(
             feature.properties.name +
             '<br />' + feature.properties.id +
-           '<br />' + feature.properties.feature-type +
+          // '<br />' + feature.properties.feature-type +
 	      '<br />' + feature.properties.notes +
 	      '<br />' + feature.properties.geology + 	    
               '<br />Lng: ' + feature.geometry.coordinates[0].toString() + ' Lat: ' + feature.geometry.coordinates[1].toString()
