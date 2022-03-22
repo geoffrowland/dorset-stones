@@ -74,8 +74,8 @@ L.Control.MousePosition = L.Control.extend({
         }
 		var value = this.options.lngFirst ? lng + this.options.separator + lat : lat + this.options.separator + lng;
 		//this._container.innerHTML = bngPrefix + bngString + eastingPrefix + bngEasting + northingPrefix + bngNorthing + '  Lng:' + lng + ' Lat:' + lat;
-		//this._container.innerHTML = bngPrefix + bngString + '  Lng:' + lng + ' Lat:' + lat;
-		this._container.innerHTML = osbngcoords + '  Lng:' + lng + ' Lat:' + lat;
+		this._container.innerHTML = bngPrefix + bngString + '  Lng:' + lng + ' Lat:' + lat;
+		//this._container.innerHTML = osbngcoords + '  Lng:' + lng + ' Lat:' + lat;
 	}
 
 });
