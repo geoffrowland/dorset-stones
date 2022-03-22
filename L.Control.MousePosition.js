@@ -39,6 +39,8 @@ L.Control.MousePosition = L.Control.extend({
 		lat = lat.toFixed(5);
         var bngproj = '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs';
         var bngcoords = proj4(bngproj, [e.latlng.lng, e.latlng.lat]);
+        var osbngcoords = os.Transform.fromLatLng({ lat: e.latlng.lat, lng: e.latlng.lng });
+      // Returns { ea: 337297, no: 503695 }	
         var bngEasting = bngcoords[0].toFixed(0);
         var bngNorthing = bngcoords[1].toFixed(0);
         // get the 100km-grid indices
@@ -72,7 +74,8 @@ L.Control.MousePosition = L.Control.extend({
         }
 		var value = this.options.lngFirst ? lng + this.options.separator + lat : lat + this.options.separator + lng;
 		//this._container.innerHTML = bngPrefix + bngString + eastingPrefix + bngEasting + northingPrefix + bngNorthing + '  Lng:' + lng + ' Lat:' + lat;
-		this._container.innerHTML = bngPrefix + bngString + '  Lng:' + lng + ' Lat:' + lat;
+		//this._container.innerHTML = bngPrefix + bngString + '  Lng:' + lng + ' Lat:' + lat;
+		this._container.innerHTML = osbngcoords + '  Lng:' + lng + ' Lat:' + lat;
 	}
 
 });
